@@ -14,5 +14,6 @@
         swayidle
         swaylock
         where-is-my-sddm-theme
+        fuzzel
     ];
 }
