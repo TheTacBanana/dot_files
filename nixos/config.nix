@@ -1,5 +1,11 @@
 { config, pkgs, ... }:
 {
+  imports = [
+      ./wm.nix
+      ./git.nix
+      ./languages.nix
+  ];
+
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
@@ -31,35 +37,16 @@
 
   nixpkgs.config.allowUnfree = true;
 
-  programs.hyprland.enable = true;
-
   environment.systemPackages = with pkgs; [
-    # Core
-    vim
-    kitty
-    git
-    gh
-    gnumake
-    xdg-utils
-    cloc
-    networkmanagerapplet
-
-    # Languages
-    python3
-    swiProlog
-    rustup
-    gcc
-
-    # Applications
-    firefox
-    vscode
-
-    # Window Manager
-    brightnessctl
-    swayidle
-    swaylock
-    eww
-  ];
+        vim
+        kitty
+        gnumake
+        xdg-utils
+        cloc
+        networkmanagerapplet
+        firefox
+        vscode
+    ];
 
   security.pam.services.swaylock = {};
 
