@@ -5,6 +5,7 @@
         ./wm.nix
         ./git.nix
         ./languages.nix
+        ./audio.nix
     ];
 
     networking.hostName = "bananaondesk";
