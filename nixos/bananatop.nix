@@ -2,7 +2,7 @@
 {
     imports = [
         ./core.nix
-        ./wm.nix
+        ./hyprland.nix
         ./git.nix
         ./languages.nix
     ];

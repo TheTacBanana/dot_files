@@ -5,5 +5,7 @@
         swiProlog
         rustup
         gcc
+        openjdk19
+        stack
     ];
 }

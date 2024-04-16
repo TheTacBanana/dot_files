@@ -8,6 +8,7 @@
     services.xserver.displayManager.sddm.theme = "where_is_my_sddm_theme";
 
     security.pam.services.swaylock = {};
+    security.pam.services.sddm = {};
 
     environment.systemPackages = with pkgs; [
         brightnessctl
@@ -15,5 +16,6 @@
         swaylock
         where-is-my-sddm-theme
         fuzzel
+        hyprpaper
     ];
 }

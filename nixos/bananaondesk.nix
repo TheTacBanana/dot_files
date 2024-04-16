@@ -2,15 +2,22 @@
 {
     imports = [
         ./core.nix
-        ./wm.nix
+        ./xmonad.nix
         ./git.nix
         ./languages.nix
         ./audio.nix
+        ./gpu.nix
     ];
 
     networking.hostName = "bananaondesk";
 
     system.stateVersion = "23.11";
+
+    fileSystems."/mnt/stuff" = {
+        device = "/dev/disk/by-partlabel/Stuff";
+        fsType = "auto";
+        options = [ "user" "rw" ];
+    };
 
     environment.systemPackages = with pkgs; [
         dolphin

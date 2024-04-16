@@ -37,6 +37,6 @@
         cloc
         networkmanagerapplet
         firefox
-        vscode
+        vscode-fhs
     ];
 }
