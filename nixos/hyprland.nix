@@ -1,21 +1,24 @@
 { pkgs, ... }:
 {
     programs.hyprland.enable = true;
-
-    services.xserver.enable = true;
-    services.xserver.displayManager.sddm.enable = true;
-    services.xserver.displayManager.sddm.wayland.enable = true;
-    services.xserver.displayManager.sddm.theme = "where_is_my_sddm_theme";
+    services.xserver = {
+        enable = true;
+        displayManager.gdm.enable = true;
+        desktopManager.xterm.enable = false;
+        displayManager.defaultSession = "hyprland";
+    };
+    security.pam.services.gdm.enableGnomeKeyring = true;
 
     security.pam.services.swaylock = {};
-    security.pam.services.sddm = {};
 
     environment.systemPackages = with pkgs; [
         brightnessctl
-        swayidle
-        swaylock
-        where-is-my-sddm-theme
         fuzzel
         hyprpaper
+        xdg-desktop-portal-hyprland
+        xdg-desktop-portal-gtk
+        swaylock
+        swayidle
+        sway-audio-idle-inhibit
     ];
 }

@@ -1,9 +1,19 @@
 { config, pkgs, ... }:
 {
-    services.xserver.enable = true;
-    services.xserver.displayManager.gdm.enable = true;
-    services.xserver.desktopManager.xterm.enable = false;
-    services.xserver.displayManager.defaultSession = "none+xmonad";
+    services.xserver = {
+        enable = true;
+        displayManager.gdm.enable = true;
+        desktopManager.xterm.enable = false;
+        displayManager.defaultSession = "none+xmonad";
+
+        libinput.enable = true;
+        libinput.mouse.accelProfile = "flat";
+        # libinput.mouse.
+    };
+
+    environment.systemPackages = with pkgs; [
+        xmousepasteblock
+    ];
 
     services.xserver.windowManager.xmonad = {
         enable = true;

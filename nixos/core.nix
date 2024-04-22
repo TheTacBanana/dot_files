@@ -32,11 +32,17 @@
     environment.systemPackages = with pkgs; [
         vim
         kitty
+        ksnip
         gnumake
         xdg-utils
         cloc
         networkmanagerapplet
         firefox
         vscode-fhs
+        qbittorrent
+        vlc
+        zip
+        unzip
+        bless
     ];
 }

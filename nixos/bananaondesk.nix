@@ -2,11 +2,12 @@
 {
     imports = [
         ./core.nix
-        ./xmonad.nix
+        ./hyprland.nix
         ./git.nix
         ./languages.nix
         ./audio.nix
-        ./gpu.nix
+        # ./xmonad.nix
+        # ./gpu.nix
     ];
 
     networking.hostName = "bananaondesk";
@@ -16,7 +17,13 @@
     fileSystems."/mnt/stuff" = {
         device = "/dev/disk/by-partlabel/Stuff";
         fsType = "auto";
-        options = [ "user" "rw" ];
+        options = [ "user" "rw" "nofail"];
+    };
+
+    fileSystems."/mnt/emby" = {
+        device = "/dev/disk/by-label/Emby";
+        fsType = "auto";
+        options = [ "user" "rw" "nofail" ];
     };
 
     environment.systemPackages = with pkgs; [
