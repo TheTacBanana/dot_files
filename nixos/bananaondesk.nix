@@ -6,8 +6,8 @@
         ./git.nix
         ./languages.nix
         ./audio.nix
+        ./gpu.nix
         # ./xmonad.nix
-        # ./gpu.nix
     ];
 
     networking.hostName = "bananaondesk";
@@ -30,11 +30,25 @@
         dolphin
         spotify
         discord
+        aseprite
+        unityhub
+        minecraft
+        prismlauncher
+
+        jellyfin
+        jellyfin-web
+        jellyfin-ffmpeg
     ];
 
     programs.steam = {
         enable = true;
         remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
         dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
+    };
+
+    services.jellyfin = {
+        enable = true;
+        openFirewall = true;
+        user="banana";
     };
 }

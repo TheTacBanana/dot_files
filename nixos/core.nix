@@ -32,7 +32,6 @@
     environment.systemPackages = with pkgs; [
         vim
         kitty
-        ksnip
         gnumake
         xdg-utils
         cloc
@@ -44,6 +43,7 @@
         zip
         unzip
         bless
+        ldtk
     ];
 
     # Keyring
