@@ -24,10 +24,16 @@
         isNormalUser = true;
         description = "Eris";
         extraGroups = [ "networkmanager" "wheel" ];
-        packages = with pkgs; [];
     };
 
     nixpkgs.config.allowUnfree = true;
+
+    programs.thunar.enable = true;
+    services.gvfs.enable = true; # Mount, trash, and other functionalities
+    services.tumbler.enable = true; # Thumbnail support for images
+    programs.thunar.plugins = with pkgs.xfce; [
+        thunar-archive-plugin
+    ];
 
     environment.systemPackages = with pkgs; [
         vim
@@ -43,11 +49,12 @@
         zip
         unzip
         bless
-        ldtk
     ];
 
     # Keyring
     security.pam.services.gdm.enableGnomeKeyring = true;
     services.gnome.gnome-keyring.enable = true;
     programs.seahorse.enable = true;
+
+
 }

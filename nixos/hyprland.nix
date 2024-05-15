@@ -15,8 +15,9 @@
         brightnessctl
         fuzzel
         hyprpaper
-        xdg-desktop-portal-hyprland
+        xdg-desktop-portal
         xdg-desktop-portal-gtk
+        xdg-desktop-portal-hyprland
         swaylock
         swayidle
         sway-audio-idle-inhibit

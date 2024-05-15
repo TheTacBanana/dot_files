@@ -7,5 +7,6 @@
         gcc
         openjdk19
         stack
+        dotnet-sdk_8
     ];
 }
