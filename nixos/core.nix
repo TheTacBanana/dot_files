@@ -23,7 +23,7 @@
     users.users.banana = {
         isNormalUser = true;
         description = "Eris";
-        extraGroups = [ "networkmanager" "wheel" ];
+        extraGroups = [ "networkmanager" "wheel" "storage" ];
     };
 
     nixpkgs.config.allowUnfree = true;

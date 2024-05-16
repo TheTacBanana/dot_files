@@ -19,13 +19,13 @@
     fileSystems."/mnt/stuff" = {
         device = "/dev/disk/by-partlabel/Stuff";
         fsType = "auto";
-        options = [ "user" "rw" "nofail"];
+        options = [ "users" "rw" "nofail"];
     };
 
     fileSystems."/mnt/emby" = {
         device = "/dev/disk/by-label/Emby";
         fsType = "auto";
-        options = [ "user" "rw" "nofail" ];
+        options = [ "users" "rw" "nofail" ];
     };
 
     environment.systemPackages = with pkgs; [
