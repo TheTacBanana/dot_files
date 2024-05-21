@@ -22,6 +22,12 @@
         options = [ "users" "rw" "nofail"];
     };
 
+    fileSystems."/mnt/games" = {
+        device = "/dev/disk/by-partlabel/games";
+        fsType = "auto";
+        options = [ "users" "rw" "nofail"];
+    };
+
     fileSystems."/mnt/emby" = {
         device = "/dev/disk/by-label/Emby";
         fsType = "auto";
@@ -31,6 +37,14 @@
     environment.systemPackages = with pkgs; [
         spotify
         discord
+        (lutris.override {
+            extraLibraries =  pkgs: [
+                # List library dependencies here
+            ];
+            extraPkgs = pkgs: [
+                # List package dependencies here
+            ];
+        })
     ];
 
     programs.steam = {

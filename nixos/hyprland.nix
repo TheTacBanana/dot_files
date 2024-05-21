@@ -17,9 +17,14 @@
         hyprpaper
         xdg-desktop-portal
         xdg-desktop-portal-gtk
+        xdg-desktop-portal-wlr
+        xdg-desktop-portal-kde
         xdg-desktop-portal-hyprland
         swaylock
         swayidle
         sway-audio-idle-inhibit
+        grim
+        slurp
+        wl-clipboard
     ];
 }
