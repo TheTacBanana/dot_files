@@ -8,5 +8,6 @@
         openjdk19
         stack
         dotnet-sdk_8
+        maven
     ];
 }
