@@ -1,4 +1,9 @@
 { config, pkgs, ... }:
+let
+  nix-alien-pkgs = import (
+    builtins.fetchTarball "https://github.com/thiagokokada/nix-alien/tarball/master"
+  ) { };
+in
 {
     boot.loader.systemd-boot.enable = true;
     boot.loader.efi.canTouchEfiVariables = true;
@@ -28,12 +33,15 @@
 
     nixpkgs.config.allowUnfree = true;
 
+    nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
     programs.thunar.enable = true;
     services.gvfs.enable = true; # Mount, trash, and other functionalities
     services.tumbler.enable = true; # Thumbnail support for images
     programs.thunar.plugins = with pkgs.xfce; [
         thunar-archive-plugin
     ];
+    programs.file-roller.enable = true;
 
     environment.systemPackages = with pkgs; [
         vim
@@ -50,6 +58,17 @@
         unzip
         bless
         gparted
+        nix-alien-pkgs.nix-alien
+
+        wineWowPackages.stable
+        wine
+        (wine.override { wineBuild = "wine64"; })
+        wine64
+        wineWowPackages.staging
+        winetricks
+        wineWowPackages.waylandFull
+
+        lxqt.lxqt-policykit
     ];
 
     # Keyring
@@ -57,4 +76,30 @@
     services.gnome.gnome-keyring.enable = true;
     programs.seahorse.enable = true;
     security.polkit.enable = true;
+
+    security.sudo = {
+        enable = true;
+        extraRules = [{
+            commands = [
+            {
+                command = "${pkgs.systemd}/bin/systemctl suspend";
+                options = [ "NOPASSWD" ];
+            }
+            {
+                command = "${pkgs.systemd}/bin/reboot";
+                options = [ "NOPASSWD" ];
+            }
+            {
+                command = "${pkgs.systemd}/bin/poweroff";
+                options = [ "NOPASSWD" ];
+            }
+            ];
+            groups = [ "wheel" ];
+        }];
+    };
+
+    programs.nix-ld = {
+        enable = true;
+        libraries = pkgs.steam-run.fhsenv.args.multiPkgs pkgs;
+    };
 }

@@ -14,7 +14,7 @@
 
     networking.hostName = "bananaondesk";
 
-    system.stateVersion = "23.11";
+    system.stateVersion = "24.05";
 
     fileSystems."/mnt/stuff" = {
         device = "/dev/disk/by-partlabel/Stuff";
