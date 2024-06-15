@@ -6,8 +6,8 @@
         displayManager.gdm.enable = true;
         displayManager.gdm.wayland = true;
         desktopManager.xterm.enable = false;
-        displayManager.defaultSession = "hyprland";
     };
+    services.displayManager.defaultSession = "hyprland";
 
     security.pam.services.swaylock = {};
 
