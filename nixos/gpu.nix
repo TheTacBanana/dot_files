@@ -26,4 +26,9 @@
     # Fix disappearing cursor on Hyprland
     environment.sessionVariables.WLR_NO_HARDWARE_CURSORS = "1";
 
+    # RGB
+    services.hardware.openrgb.enable = true;
+    imports = [
+        ./rgb.nix
+    ];
 }
