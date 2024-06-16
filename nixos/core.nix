@@ -43,6 +43,7 @@ in
     environment.systemPackages = with pkgs; [
         vim
         kitty
+        btop
         gnumake
         xdg-utils
         cloc
@@ -88,6 +89,10 @@ in
             }
             {
                 command = "${pkgs.systemd}/bin/poweroff";
+                options = [ "NOPASSWD" ];
+            }
+            {
+                command = "${pkgs.systemd}/bin/nixos-rebuild";
                 options = [ "NOPASSWD" ];
             }
             ];
