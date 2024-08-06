@@ -26,5 +26,6 @@
         grim
         slurp
         wl-clipboard
+        jq
     ];
 }
