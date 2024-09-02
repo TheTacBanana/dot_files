@@ -5,6 +5,9 @@
         ./hyprland.nix
         ./git.nix
         ./languages.nix
+        ./audio.nix
+        ./bluetooth.nix
+        ./steam.nix
     ];
 
     networking.hostName = "bananatop";
