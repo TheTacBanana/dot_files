@@ -56,6 +56,8 @@ in
         unzip
         bless
         gparted
+        spotify
+        discord
         nix-alien-pkgs.nix-alien
 
         wineWowPackages.stable

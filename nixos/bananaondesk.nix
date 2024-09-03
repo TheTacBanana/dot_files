@@ -54,8 +54,6 @@
     # };
 
     environment.systemPackages = with pkgs; [
-        spotify
-        discord
         (lutris.override {
             extraLibraries =  pkgs: [];
             extraPkgs = pkgs: [];
