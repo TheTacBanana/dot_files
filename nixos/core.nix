@@ -60,14 +60,6 @@ in
         discord
         nix-alien-pkgs.nix-alien
 
-        wineWowPackages.stable
-        wine
-        (wine.override { wineBuild = "wine64"; })
-        wine64
-        wineWowPackages.staging
-        winetricks
-        wineWowPackages.waylandFull
-
         lxqt.lxqt-policykit
     ];
 
