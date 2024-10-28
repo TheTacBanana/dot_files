@@ -48,11 +48,11 @@
         options = [ "users" "rw" "exec" "nofail"];
     };
 
-    # fileSystems."/mnt/emby" = {
-    #     device = "/dev/disk/by-label/Emby";
-    #     fsType = "auto";
-    #     options = [ "users" "nofail" ];
-    # };
+    fileSystems."/mnt/jelly" = {
+        device = "/dev/disk/by-label/jelly";
+        fsType = "auto";
+        options = [ "users" "nofail" ];
+    };
 
     environment.systemPackages = with pkgs; [
         (lutris.override {
