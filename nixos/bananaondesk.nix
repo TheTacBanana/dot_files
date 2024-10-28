@@ -10,6 +10,7 @@
         ./multimedia.nix
         ./gamedev.nix
         ./steam.nix
+        ./helix.nix
     ];
 
     networking.hostName = "bananaondesk";

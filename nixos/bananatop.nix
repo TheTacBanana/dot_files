@@ -7,6 +7,7 @@
         ./languages.nix
         ./audio.nix
         ./bluetooth.nix
+        ./helix.nix
     ];
 
     networking.hostName = "bananatop";

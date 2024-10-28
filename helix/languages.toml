@@ -1,0 +1,25 @@
+[[language]]
+name = "rust"
+auto-format = true
+formatter = { command = "rustfmt" }
+
+[[language]]
+name = "c"
+auto-format = true
+formatter = { command = "clang-format" }
+
+[[language]]
+name = "typst"
+auto-format = true
+formatter = { command = "typstfmt" }
+
+[[language]]
+name = "markdown"
+auto-format = true
+formatter = { command = "dprint", args = ["fmt", "--stdin", "md"]}
+
+[[language]]
+name = "nix"
+auto-format = true
+formatter = { command = "nixfmt" }
+

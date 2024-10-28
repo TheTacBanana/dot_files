@@ -98,4 +98,8 @@ in
         enable = true;
         libraries = pkgs.steam-run.fhsenv.args.multiPkgs pkgs;
     };
+
+    programs.bash.shellAliases = {
+        bat = "cat /sys/class/power_supply/BAT0/capacity";
+    };
 }
