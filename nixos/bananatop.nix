@@ -8,6 +8,7 @@
         ./audio.nix
         ./bluetooth.nix
         ./helix.nix
+        ./suspend.nix
     ];
 
     networking.hostName = "bananatop";
@@ -16,4 +17,10 @@
 
     boot.loader.systemd-boot.enable = true;
     boot.loader.efi.canTouchEfiVariables = true;
+
+    services.batteryNotifier = {
+        enable = true;
+        notifyCapacity = 20;
+        suspendCapacity = 3;
+    };
 }
