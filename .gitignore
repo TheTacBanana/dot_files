@@ -23,7 +23,12 @@
 /lutris
 /balena-etcher
 /lxqt
+/typstfmt
+/GIMP
+/gtk-3.0
 /OpenRGB
+/helix/runtime
+/helix/grammars
 mimeapps.list
 pavucontrol.ini
 QtProject.conf

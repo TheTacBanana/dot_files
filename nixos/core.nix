@@ -7,7 +7,10 @@ in
 {
     time.timeZone = "Europe/London";
 
-    networking.networkmanager.enable = true;
+    networking = {
+        networkmanager.enable = true;
+        nameservers = [ "1.1.1.1" "8.8.8.8" ];
+    };
 
     i18n.defaultLocale = "en_GB.UTF-8";
     i18n.extraLocaleSettings = {
