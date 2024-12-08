@@ -8,6 +8,7 @@
     nil
     clang-tools
     typst-lsp
+    zls
 
     # Formatter
     rustfmt
