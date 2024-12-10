@@ -61,6 +61,8 @@ in
         gparted
         spotify
         discord
+        discord-canary
+        xdg-desktop-portal-hyprland
         nix-alien-pkgs.nix-alien
 
         lxqt.lxqt-policykit
