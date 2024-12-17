@@ -68,6 +68,10 @@ in
         lxqt.lxqt-policykit
     ];
 
+    fonts.fonts = with pkgs; [
+        fira-code
+    ];
+
     # Keyring
     security.pam.services.gdm.enableGnomeKeyring = true;
     services.gnome.gnome-keyring.enable = true;
