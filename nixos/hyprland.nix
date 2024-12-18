@@ -1,15 +1,18 @@
 { pkgs, ... }:
 {
     programs.hyprland.enable = true;
-    services.xserver = {
-        enable = true;
-        displayManager.gdm.enable = true;
-        displayManager.gdm.wayland = true;
-        desktopManager.xterm.enable = false;
+    services = {
+        xserver = {
+            enable = true;
+            desktopManager.xterm.enable = false;
+            displayManager.gdm.enable = true;
+            displayManager.gdm.wayland = true;
+        };
+        displayManager.defaultSession = "hyprland";
     };
-    services.displayManager.defaultSession = "hyprland";
 
-    security.pam.services.swaylock = {};
+    security.pam.services.hyprlock = {};
+
 
     environment.systemPackages = with pkgs; [
         brightnessctl
@@ -22,6 +25,7 @@
         xdg-desktop-portal-hyprland
         hyprlock
         hypridle
+        hyprcursor
         grim
         slurp
         wl-clipboard

@@ -32,6 +32,8 @@ in
     };
 
     nixpkgs.config.allowUnfree = true;
+    system.autoUpgrade.enable = true;
+    system.autoUpgrade.allowReboot = true;
 
     nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
@@ -57,7 +59,7 @@ in
         vlc
         zip
         unzip
-        bless
+        imhex
         gparted
         spotify
         discord
@@ -68,7 +70,7 @@ in
         lxqt.lxqt-policykit
     ];
 
-    fonts.fonts = with pkgs; [
+    fonts.packages = with pkgs; [
         fira-code
     ];
 
@@ -105,7 +107,7 @@ in
 
     programs.nix-ld = {
         enable = true;
-        libraries = pkgs.steam-run.fhsenv.args.multiPkgs pkgs;
+        # libraries = pkgs.steam-run.fhsenv.args.multiPkgs pkgs;
     };
 
     programs.bash.shellAliases = {
