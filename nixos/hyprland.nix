@@ -29,6 +29,7 @@
         grim
         slurp
         wl-clipboard
+        wayfreeze
         jq
     ];
 }
