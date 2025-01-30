@@ -53,6 +53,8 @@ in
         cloc
         networkmanagerapplet
         firefox
+        google-chrome
+        pympress
         vscode-fhs
         qbittorrent
         vlc
