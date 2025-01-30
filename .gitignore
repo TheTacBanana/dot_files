@@ -30,6 +30,8 @@
 /OpenRGB
 /helix/runtime
 /helix/grammars
+/google-chrome
+/tree-sitter
 mimeapps.list
 pavucontrol.ini
 QtProject.conf

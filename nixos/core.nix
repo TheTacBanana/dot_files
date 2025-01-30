@@ -28,12 +28,11 @@ in
     users.users.banana = {
         isNormalUser = true;
         description = "Eris";
-        extraGroups = [ "networkmanager" "wheel" "storage" ];
+        extraGroups = [ "networkmanager" "wheel" "storage" "gamemode" ];
     };
 
     nixpkgs.config.allowUnfree = true;
     system.autoUpgrade.enable = true;
-    system.autoUpgrade.allowReboot = true;
 
     nix.settings.experimental-features = [ "nix-command" "flakes" ];
 

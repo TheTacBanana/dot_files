@@ -17,10 +17,11 @@
   systemd.tmpfiles.rules = [ "L+    /opt/rocm/hip   -    -    -     -    ${pkgs.rocmPackages.clr}" ];
 
   # Enable OpenGL
-  hardware.opengl.enable = true;
-  hardware.opengl.driSupport32Bit = true; # For 32 bit applications
+  hardware.graphics.enable = true;
+  hardware.graphics.enable32Bit = true; # For 32 bit applications
 
-  hardware.opengl.extraPackages = with pkgs; [ amdvlk ];
+  # Commented out for dying light 2
+  # hardware.graphics.extraPackages = with pkgs; [ amdvlk ];
 
   services.xserver.videoDrivers = [ "amdgpu" ];
   # Force wayland when possible
