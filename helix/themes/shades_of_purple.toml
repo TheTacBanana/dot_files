@@ -1,0 +1,71 @@
+# Author: Wei-Ying Chen <weiying.alex.chen@gmail.com>
+# Based on Shades of Purple: https://github.com/ahmadawais/shades-of-purple-vscode
+
+"type" = "bluish"
+"constant" = "purplish"
+"string" = "greenish"
+"muted" = "muted"
+"variable" = "fg"
+"label" = "bluish"
+"punctuation" = "fg"
+"keyword" = "redish"
+"operator" = "fg"
+"function" = "yellowish"
+"tag" = { fg = "bluish", modifiers = ["italic"] }
+"namespace" = "bluish"
+"attribute" = "purplish"
+"constructor" = "bluish"
+"module" = "bluish"
+"special" = "yellowish"
+
+"markup.heading.marker" = "muted"
+"markup.heading" = { fg = "yellowish", modifiers = ["bold"] }
+"markup.list" = "redish"
+"markup.bold" = { modifiers = ["bold"] }
+"markup.italic" = { modifiers = ["italic"] }
+"markup.strikethrough" = { modifiers = ["crossed_out"] }
+"markup.link.url" = { fg = "bluish", modifiers = ["underlined"] }
+"markup.link.text" = "purplish"
+"markup.quote" = "muted"
+"markup.raw" = "yellowish"
+
+"diff.plus" = "greenish"
+"diff.delta" = "yellowish"
+"diff.minus" = "redish"
+
+"ui.background" = { bg = "bg" }
+"ui.cursor" = { fg = "bg", bg = "redish" }
+"ui.cursor.match" = { underline = { style = "line", color = "redish" } }
+"ui.selection" = { bg = "muted" }
+"ui.selection.primary" = { bg = "muted" }
+"ui.linenr" = "muted"
+"ui.linenr.selected" = "fg"
+"ui.statusline" = { fg = "fg", bg = "muted" }
+"ui.statusline.inactive" = { fg = "muted", bg = "muted" }
+"ui.popup" = { fg = "muted", bg = "muted" }
+"ui.help" = { fg = "fg", bg = "muted" }
+"ui.text" = "fg"
+"ui.menu" = { fg = "fg", bg = "muted" }
+"ui.menu.selected" = { fg = "bg", bg = "yellowish" }
+"ui.virtual.whitespace" = { fg = "muted" }
+"ui.virtual.ruler" = { bg = "muted" }
+
+info = { fg = "bluish", modifiers = ["bold"] }
+hint = { fg = "greenish", modifiers = ["bold"] }
+warning = { fg = "yellowish", modifiers = ["bold"] }
+error = { fg = "redish", modifiers = ["bold"] }
+
+"diagnostic.info" = { underline = { style = "curl", color = "bluish" } }
+"diagnostic.hint" = { underline = { style = "curl", color = "greenish" } }
+"diagnostic.warning" = { underline = { style = "curl", color = "yellowish" } }
+"diagnostic.error" = { underline = { style = "curl", color = "redish" } }
+
+[palette]
+fg = "#ffffff"
+bg = "#2c2956"
+redish = "#ff5f8b"
+yellowish = "#fbd200"
+greenish = "#a2fb8b"
+bluish = "#9afeff"
+purplish = "#fc90ff"
+muted = "#6e659e"

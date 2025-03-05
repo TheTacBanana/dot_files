@@ -1,4 +1,4 @@
-theme = "poimandres_storm"
+theme = "shades_of_purple"
 
 [editor]
 line-number = "relative"
@@ -18,9 +18,29 @@ center = ["file-name"]
 right = ["diagnostics", "position", "file-encoding", "version-control"]
 
 [keys.normal]
-a = "insert_mode"
-"C-up" = "page_cursor_half_up"
-"C-down" = "page_cursor_half_down"
+a = ["insert_mode", "move_char_right", "collapse_selection"]
+
+C-up = "page_cursor_half_up"
+C-down = "page_cursor_half_down"
+C-right = "move_next_word_start"
+C-left = "move_prev_word_end"
+C-S-right = "extend_next_word_end"
+C-S-left = "extend_prev_word_start"
+S-right = "extend_char_right"
+S-left = "extend_char_left"
+
+[keys.normal.q]
+d = "normal_mode"
+
+[keys.insert]
+C-up = "page_cursor_half_up"
+C-down = "page_cursor_half_down"
+C-right = "move_next_word_start"
+C-left = "move_prev_word_end"
+C-S-right = "extend_next_word_end"
+C-S-left = "extend_prev_word_start"
+S-right = "extend_char_right"
+S-left = "extend_char_left"
 
 [keys.insert.q]
 d = "normal_mode"
@@ -28,3 +48,4 @@ d = "normal_mode"
 [keys.select]
 "A-up" = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before", "select_mode", "extend_to_line_bounds"]
 "A-down" = ["extend_to_line_bounds", "delete_selection", "paste_after", "select_mode","extend_to_line_bounds"]
+
