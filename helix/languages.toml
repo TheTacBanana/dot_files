@@ -4,10 +4,13 @@ auto-format = true
 formatter = { command = "rustfmt" }
 
 [[language]]
+name = "zig"
+auto-format = true
+
+[[language]]
 name = "c"
 auto-format = true
 formatter = { command = "clang-format" }
-
 
 [[language]]
 name = "cpp"
@@ -16,7 +19,7 @@ formatter = { command = "clang-format" }
 [[language]]
 name = "typst"
 auto-format = true
-formatter = { command = "typstfmt" }
+formatter = { command = "typstyle" }
 
 [[language]]
 name = "markdown"
@@ -28,3 +31,13 @@ name = "nix"
 auto-format = true
 formatter = { command = "nixfmt" }
 
+# [[language]]
+# name = "ecsl"
+# scope = "source.ecsl"
+# file-types = [ "ecsl" ]
+# auto-format = false
+# comment-token = "//"
+# block-comment-tokens = [
+#   { start = "/*", end = "*/" },
+# ]
+# indent = { tab-width = 4, unit = "    " }
