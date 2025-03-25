@@ -2,7 +2,12 @@ theme = "shades_of_purple"
 
 [editor]
 line-number = "relative"
+auto-pairs = false
 scrolloff = 10
+end-of-line-diagnostics = "hint"
+
+[editor.inline-diagnostics]
+cursor-line = "warning"
 
 [editor.cursor-shape]
 insert = "bar"
