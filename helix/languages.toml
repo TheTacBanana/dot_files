@@ -31,13 +31,13 @@ name = "nix"
 auto-format = true
 formatter = { command = "nixfmt" }
 
-# [[language]]
-# name = "ecsl"
-# scope = "source.ecsl"
-# file-types = [ "ecsl" ]
-# auto-format = false
-# comment-token = "//"
-# block-comment-tokens = [
-#   { start = "/*", end = "*/" },
-# ]
-# indent = { tab-width = 4, unit = "    " }
+[[language]]
+name = "ecsl"
+scope = "source.ecsl"
+file-types = [ "ecsl" ]
+auto-format = false
+comment-token = "//"
+block-comment-tokens = [
+  { start = "/*", end = "*/" },
+]
+indent = { tab-width = 4, unit = "    " }

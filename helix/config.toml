@@ -22,6 +22,14 @@ left = ["mode", "spinner"]
 center = ["file-name"]
 right = ["diagnostics", "position", "file-encoding", "version-control"]
 
+[editor.whitespace]
+render = "all"
+
+[editor.indent-guides]
+render = true
+character = "┊"
+skip-levels = 1
+
 [keys.normal]
 a = ["insert_mode", "move_char_right", "collapse_selection"]
 
@@ -55,3 +63,6 @@ d = "normal_mode"
 [keys.select]
 "A-up" = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before", "select_mode", "extend_to_line_bounds"]
 "A-down" = ["extend_to_line_bounds", "delete_selection", "paste_after", "select_mode","extend_to_line_bounds"]
+
+[keys.select.q]
+d = "normal_mode"
