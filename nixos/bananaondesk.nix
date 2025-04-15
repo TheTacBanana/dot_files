@@ -6,6 +6,7 @@
         ./git.nix
         ./languages.nix
         ./audio.nix
+        ./bluetooth.nix
         ./gpu.nix
         ./multimedia.nix
         ./gamedev.nix
@@ -26,6 +27,7 @@
         efiSysMountPoint = "/boot";
         };
         grub = {
+            configurationLimit = 30;
             devices = [ "nodev" ];
             efiSupport = true;
             enable = true;

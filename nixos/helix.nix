@@ -7,12 +7,12 @@
     marksman
     nil
     clang-tools
-    typst-lsp
+    tinymist
     zls
 
     # Formatter
     rustfmt
-    typstfmt
+    typstyle
     nixfmt-rfc-style
     dprint
   ];

@@ -33,6 +33,8 @@ in
     networkmanagerapplet
     firefox
     google-chrome
+    reco
+    obs-studio
     pympress
     vscode-fhs
     qbittorrent
@@ -45,6 +47,7 @@ in
     discord
     discord-canary
     pinnedZoom
+    nnn
   ];
 
   i18n.defaultLocale = "en_GB.UTF-8";

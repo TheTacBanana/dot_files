@@ -41,3 +41,12 @@ block-comment-tokens = [
   { start = "/*", end = "*/" },
 ]
 indent = { tab-width = 4, unit = "    " }
+
+
+[[language]]
+name = "yacc"
+scope = "source.yacc"
+file-types = [ "y" ]
+auto-format = false
+comment-token = "//"
+indent = { tab-width = 4, unit = "    " }

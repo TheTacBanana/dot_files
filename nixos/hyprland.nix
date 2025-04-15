@@ -32,6 +32,7 @@
         wl-clipboard
         wayfreeze
         jq
+        hyprland-activewindow
     ];
 
     xdg.portal = {
