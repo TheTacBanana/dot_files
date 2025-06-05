@@ -50,3 +50,12 @@ file-types = [ "y" ]
 auto-format = false
 comment-token = "//"
 indent = { tab-width = 4, unit = "    " }
+
+
+[[language]]
+name = "sublime"
+scope = "source.sublime"
+file-types = [ "sublime-syntax" ]
+auto-format = false
+comment-token = "#"
+indent = { tab-width = 4, unit = "    " }

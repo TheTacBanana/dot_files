@@ -9,11 +9,13 @@
     clang-tools
     tinymist
     zls
+    typescript-language-server
 
     # Formatter
     rustfmt
     typstyle
     nixfmt-rfc-style
     dprint
+    superhtml
   ];
 }

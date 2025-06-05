@@ -37,6 +37,7 @@ in
     obs-studio
     pympress
     vscode-fhs
+    sublime3
     qbittorrent
     vlc
     zip
@@ -47,7 +48,11 @@ in
     discord
     discord-canary
     pinnedZoom
+    teams-for-linux
     nnn
+    hexyl
+    typst
+    hayagriva
   ];
 
   i18n.defaultLocale = "en_GB.UTF-8";
