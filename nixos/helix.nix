@@ -10,6 +10,7 @@
     tinymist
     zls
     typescript-language-server
+    jdt-language-server
 
     # Formatter
     rustfmt
