@@ -11,6 +11,7 @@
     zls
     typescript-language-server
     jdt-language-server
+    python313Packages.jedi-language-server
 
     # Formatter
     rustfmt
@@ -18,5 +19,6 @@
     nixfmt-rfc-style
     dprint
     superhtml
+    black
   ];
 }
