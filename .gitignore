@@ -32,7 +32,14 @@
 /helix/grammars
 /google-chrome
 /tree-sitter
+/blender
+/kitty/kitty.conf.bak
+/obs-studio
 mimeapps.list
 pavucontrol.ini
 QtProject.conf
 trashrc
+zoom.conf
+zoomus.conf
+pypress
+kdeglobals
