@@ -1,17 +1,11 @@
 { pkgs, ... }:
 
 let
-  wanipaper =
-    import
-      (pkgs.fetchFromGitHub {
-        owner = "TheTacBanana";
-        repo = "wanipaper";
-        rev = "65c101c3665df33bdd2ceb82e830d4c7e899ac91";
-        hash = "sha256-STBGeAW7bHrACNW63yL/Iso93d6oK9XUqgoOmrBoh2U=";
-      })
-      {
-        pkgs = pkgs;
-      };
+  wanipaperSrc = builtins.fetchGit {
+    url = "https://github.com/TheTacBanana/wanipaper.git";
+    ref = "master";
+  };
+  wanipaper = pkgs.callPackage wanipaperSrc { };
 in
 {
   programs.hyprland.enable = true;
