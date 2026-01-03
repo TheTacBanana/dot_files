@@ -53,6 +53,7 @@ in
     hexyl
     typst
     hayagriva
+    thunar-archive-plugin
   ];
 
   i18n.defaultLocale = "en_GB.UTF-8";
@@ -79,6 +80,26 @@ in
     ];
   };
 
+  programs.zsh = {
+    enable = true;
+    enableCompletion = true;
+    autosuggestions.enable = true;
+    syntaxHighlighting.enable = true;
+
+    shellAliases = {
+      bat = "cat /sys/class/power_supply/BAT0/capacity";
+      cloc = "cloc --vcs=git";
+    };
+
+    histSize = 10000;
+    histFile = "$HOME/.zsh_history";
+    setOptions = [
+      "HIST_IGNORE_ALL_DUPS"
+    ];
+  };
+
+  programs.starship.enable = true;
+
   nixpkgs.config.allowUnfree = true;
   system.autoUpgrade.enable = true;
 
@@ -90,10 +111,6 @@ in
   programs.thunar.enable = true;
   services.gvfs.enable = true; # Mount, trash, and other functionalities
   services.tumbler.enable = true; # Thumbnail support for images
-  programs.thunar.plugins = with pkgs.xfce; [
-    thunar-archive-plugin
-  ];
-  programs.file-roller.enable = true;
   fonts.packages = with pkgs; [
     fira-code
   ];
@@ -104,39 +121,6 @@ in
   programs.seahorse.enable = true;
   security.polkit.enable = true;
 
-  security.sudo = {
-    enable = true;
-    extraRules = [
-      {
-        commands = [
-          {
-            command = "${pkgs.systemd}/bin/systemctl suspend";
-            options = [ "NOPASSWD" ];
-          }
-          {
-            command = "${pkgs.systemd}/bin/reboot";
-            options = [ "NOPASSWD" ];
-          }
-          {
-            command = "${pkgs.systemd}/bin/poweroff";
-            options = [ "NOPASSWD" ];
-          }
-          {
-            command = "${pkgs.systemd}/bin/nixos-rebuild";
-            options = [ "NOPASSWD" ];
-          }
-        ];
-        groups = [ "wheel" ];
-      }
-    ];
-  };
+  security.sudo.enable = true;
 
-  programs.nix-ld = {
-    enable = true;
-  };
-
-  programs.bash.shellAliases = {
-    bat = "cat /sys/class/power_supply/BAT0/capacity";
-    cloc = "cloc --vcs=git";
-  };
 }

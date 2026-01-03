@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 {
   imports = [
     ./core.nix
@@ -9,10 +9,8 @@
     ./bluetooth.nix
     ./gpu.nix
     ./multimedia.nix
-    ./gamedev.nix
     ./steam.nix
     ./helix.nix
-    ./llm.nix
   ];
 
   networking.hostName = "bananaondesk";
@@ -38,7 +36,7 @@
         insmod fat
         insmod search_fs_uuid
         insmod chain
-        search --fs-uuid --set=root 6E42-D51B
+        search --fs-uuid --set=root 58D4-FF82
         chainloader /EFI/Microsoft/Boot/bootmgfw.efi
         }
       '';
@@ -64,18 +62,4 @@
       "nofail"
     ];
   };
-
-  environment.systemPackages = with pkgs; [
-    (lutris.override {
-      extraLibraries = pkgs: [ ];
-      extraPkgs = pkgs: [ ];
-    })
-    wineWowPackages.stable
-    wine
-    (wine.override { wineBuild = "wine64"; })
-    wine64
-    wineWowPackages.staging
-    winetricks
-    wineWowPackages.waylandFull
-  ];
 }
